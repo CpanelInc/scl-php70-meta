@@ -8,7 +8,7 @@
 OBS_PROJECT := EA4-experimental
 
 # the package name in OBS
-OBS_PACKAGE := php70-php-meta
+OBS_PACKAGE := scl-php70-meta
 
 #-------------------------------------------------------------------------------------
 #
