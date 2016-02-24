@@ -14,9 +14,9 @@
 
 Summary:       Package that installs PHP 7.0
 Name:          %scl_name
-Version:       1.1
+Version:       7.0.3
 Vendor:        cPanel, Inc.
-Release:       8%{?dist}
+Release:       1%{?dist}
 Group:         Development/Languages
 License:       GPLv2+
 
@@ -140,5 +140,8 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 
 
 %changelog
+* Wed Feb 24 2016 Jacob Perkins <jacob.perkins@cpanel.net> 7.0.3-1
+- Bumped package version
+
 * Tue Dec 08 2015 <matt@cpanel.net> 1-1
 - initial packaging
