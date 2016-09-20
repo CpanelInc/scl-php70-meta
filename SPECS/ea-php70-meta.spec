@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 7.0
 Name:          %scl_name
-Version:       7.0.10
+Version:       7.0.11
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define release_prefix 1
@@ -142,6 +142,9 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 
 
 %changelog
+* Thu Sep 15 2016 Perkins <jacob.perkins@cpanel.net> - 7.0.11-1
+- EA-5249: Release 7.0.11 to match PHP 7.0 release of 7.0.11
+
 * Fri Aug 19 2016 Jacob Perkins <jacob.perkins@cpanel.net> - 7.0.10-1
 - EA-5086: Release 7.0.10 to match PHP 7.0 release of 7.0.10
 
