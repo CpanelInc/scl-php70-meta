@@ -17,7 +17,7 @@ Name:          %scl_name
 Version:       7.0.27
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define release_prefix 4
+%define release_prefix 5
 Release: %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -65,6 +65,9 @@ to build %scl Software Collection.
 %package scldevel
 Summary:   Package shipping development files for %scl
 Group:     Development/Languages
+
+Provides:  ea-php-scldevel = %{version}
+Conflicts: ea-php-scldevel > %{version}, ea-php-scldevel < %{version}
 
 %description scldevel
 Package shipping development files, especially usefull for development of
@@ -175,6 +178,9 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 
 
 %changelog
+* Thu Feb 15 2018 Daniel Muey <dan@cpanel.net> - 7.0.27-5
+- EA-5277: Add conflicts for ea-php##-scldevel packages
+
 * Wed Jan 17 2018 Daniel Muey <dan@cpanel.net> - 7.0.27-4
 - EA-6958: Ensure ownership of _licensedir if it is set
 
